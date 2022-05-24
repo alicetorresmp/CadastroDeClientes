@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Cadastro de Clientes</string>
+    <string name="titulo">Cadastro de Clientes</string>
+    <string name="instrucoes">Informa seu Login e Senha para continuar</string>
+    <string name="login">Login:</string>
+    <string name="senha">Senha:</string>
+    <string name="acesso_app">Acesso ao App</string>
+    <string name="nome">Nome:</string>
+    <string name="endereco">Endereço:</string>
+    <string name="numero">Número:</string>
+    <string name="complemento">Complemento:</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="matricula">Matrícula:</string>
+    <string name="cidade">Cidade:</string>
+    <string name="visualizar">Visualizar</string>
+    <string name="pesquisar">Pesquisar</string>
+    <string name="title_activity_pesquisar_cliente">PesquisarCliente</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="voltar">Voltar</string>
+    <string name="procurar">Procurar</string>
+</resources>

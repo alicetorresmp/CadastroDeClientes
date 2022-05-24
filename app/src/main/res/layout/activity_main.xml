@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/titulo"
+        android:layout_marginTop="@dimen/margin_pad"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textColor="@color/black"
+        android:textSize="@dimen/titulo_size" />
+
+    <TextView
+        android:fontFamily="sans-serif-condensed-light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/instrucoes"
+        android:textSize="@dimen/subtext" />
+
+    <TextView
+        android:fontFamily="sans-serif-condensed-light"
+        android:paddingTop="@dimen/margin_pad2"
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_pad"
+        android:layout_marginTop="@dimen/margin_gif"
+        android:text="@string/login"
+        android:textSize="@dimen/info"
+        />
+
+    <EditText
+        android:id="@+id/txtLogin"
+        android:layout_width="@dimen/edittext"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_pad" />
+
+    <TextView
+        android:fontFamily="sans-serif-condensed-light"
+        android:id="@+id/senha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_pad"
+        android:layout_marginTop="@dimen/titulo_size"
+        android:text="@string/senha"
+        android:textSize="@dimen/info" />
+
+    <EditText
+        android:inputType="textPassword"
+        android:id="@+id/txtSenha"
+        android:layout_width="@dimen/edittext"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_pad" />
+
+    <Button
+        android:layout_marginTop="@dimen/margin_pad2"
+        android:id="@+id/botaoLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="logar"
+        android:text="@string/acesso_app" />
+
+
+</LinearLayout>
