@@ -38,7 +38,7 @@ public class ListarPesquisaCliente extends AppCompatActivity {
         Intent intent = getIntent();
         String name = intent.getSerializableExtra("ParametroName").toString();
 
-        searchData(name);
+        //searchData(name);
 
         userlist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -61,8 +61,8 @@ public class ListarPesquisaCliente extends AppCompatActivity {
         finish();
     }
 
-    private void searchData(String name) {
-        Cursor cursor = db.searchData(name);
+  /*  private void searchData(String name) {
+            Cursor cursor = db.searchData(name);
 
 
         if(cursor.getCount() == 0){
@@ -87,5 +87,5 @@ public class ListarPesquisaCliente extends AppCompatActivity {
             userlist.setAdapter(adapter);
 
         }
-    }
+    }*/
 }

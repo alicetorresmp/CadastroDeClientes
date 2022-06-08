@@ -9,6 +9,7 @@
     android:padding="16sp"
     android:scrollbarSize="15sp"
     android:background="@color/white">
+
     <LinearLayout
         android:padding="@dimen/info"
         android:layout_width="match_parent"
@@ -36,27 +37,6 @@
             android:text="@string/titulo"
             android:textSize="@dimen/titulo_size" />
 
-        <LinearLayout
-            android:layout_width="166dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
-
-            <Button
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_gif"
-                android:background="@drawable/search"
-                android:onClick="pesquisar" />
-
-            <Button
-                android:layout_width="56dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/margin_gif"
-                android:background="@drawable/list"
-                android:onClick="visualizar" />
-        </LinearLayout>
 
 
         <TextView
@@ -85,7 +65,6 @@
 
         <EditText
             android:inputType="number"
-
             android:id="@+id/txtMatricula"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -141,12 +120,14 @@
             android:id="@+id/txtCidade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+
         <Button
             android:layout_gravity="center"
             android:text="@string/cadastrar"
             android:id="@+id/cadastrar"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            />
     </LinearLayout>
 </ScrollView>
 

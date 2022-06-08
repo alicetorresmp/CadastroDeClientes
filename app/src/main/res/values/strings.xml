@@ -20,4 +20,8 @@
     <string name="title_notifications">Notifications</string>
     <string name="voltar">Voltar</string>
     <string name="procurar">Procurar</string>
+    <string name="tituloSearch">Busca</string>
+    <string name="deletar">Deletar</string>
+    <string name="deletartudo">Deletar Tudo</string>
+    <string name="insira_nome">Insira o nome</string>
 </resources>

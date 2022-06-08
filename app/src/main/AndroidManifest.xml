@@ -14,6 +14,12 @@
         android:theme="@style/Theme.TrabalhoMobile"
         tools:targetApi="31">
         <activity
+            android:name=".AtualizarCliente"
+            android:exported="false" />
+        <activity
+            android:name=".DeletarCliente"
+            android:exported="false" />
+        <activity
             android:name=".ListarPesquisaCliente"
             android:exported="false" />
         <activity

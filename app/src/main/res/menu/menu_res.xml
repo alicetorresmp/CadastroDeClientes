@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/app_bar_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Procurar"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView"
+        />
+
+
+    <group>
+
+
+        <item
+            android:id="@+id/visualizar_item"
+            android:title="Visualizar tudo"
+            app:showAsAction="never"
+            android:onClick="visualizar"
+            />
+
+
+        <item
+            android:id="@+id/deletar_item"
+            android:title="Deletar"
+            app:showAsAction="never"
+            android:onClick="deletar"
+           />
+
+        <item
+            android:onClick="atualizar"
+            android:id="@+id/atualizar_item"
+            android:title="Atualizar"
+            app:showAsAction="never" />
+    </group>
+
+</menu>

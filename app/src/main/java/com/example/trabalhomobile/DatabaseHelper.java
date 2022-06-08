@@ -21,14 +21,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String NUMERO = "NUMERO";
     private static final String CIDADE = "CIDADE";
 
-    private static final String CREATE_TABLE = "CREATE TABLE "+ DB_TABLE+" ("+
-            ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "+
-            NOME+ " TEXT," +
-            MATRICULA+ " TEXT, " +
-            ENDERECO + " TEXT, " +
-            COMPLEMENTO + " TEXT, " +
-            NUMERO + " TEXT, " +
-            CIDADE+ " TEXT " + ")";
+    private static final String CREATE_TABLE = "CREATE TABLE "+DB_TABLE+" ("+
+            ID+ " INTEGER PRIMARY KEY AUTOINCREMENT, "+
+            NOME+" TEXT," +
+            MATRICULA+" TEXT, " +
+            ENDERECO+" TEXT, " +
+            COMPLEMENTO+" TEXT, " +
+            NUMERO+" TEXT, " +
+            CIDADE+" TEXT " + ")";
 
     public DatabaseHelper(Context context){
         super(context, DB_NAME, null, 1);
@@ -62,16 +62,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return result != -1; // se for -1 quer dizer que os dados não foram inseridos
     }
 
-    public Cursor viewData(){
+    public Cursor viewData() {
         SQLiteDatabase db = this.getReadableDatabase();
-        String query = "SELECT * FROM "+DB_TABLE;
+        String query = "SELECT * FROM "+DB_TABLE+"";
         Cursor cursor = db.rawQuery(query, null);
         return cursor;
+    }
 
-    } public Cursor searchData(String nome2){
+    public void deleteData(String nome2) {
         SQLiteDatabase db = this.getReadableDatabase();
-        String query = "SELECT * FROM "+DB_TABLE+" WHERE "+NOME+" LIKE '%"+nome2+"%'";
-        Cursor cursor = db.rawQuery(query, null);
-        return cursor;
+        db.execSQL("DELETE FROM " + DB_TABLE+ " WHERE "+NOME+"='"+nome2+"'");
+        db.close();
+    }
+    public void deleteAllData() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        db.execSQL("DELETE FROM " + DB_TABLE+ "");
+        db.close();
     }
 }
