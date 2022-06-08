@@ -42,4 +42,8 @@ public class DeletarCliente extends AppCompatActivity {
                 ListarCliente.class);
         startActivity(intent);
     }
+    public void voltar(View view){
+
+       finish();
+    }
 }

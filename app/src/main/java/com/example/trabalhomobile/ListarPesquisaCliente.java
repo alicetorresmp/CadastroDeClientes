@@ -36,9 +36,9 @@ public class ListarPesquisaCliente extends AppCompatActivity {
         listItem = new ArrayList<>();
 
         Intent intent = getIntent();
-        String name = intent.getSerializableExtra("ParametroName").toString();
+        String name = intent.getSerializableExtra("ParametroNome").toString();
 
-        //searchData(name);
+        searchData(name);
 
         userlist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -55,37 +55,48 @@ public class ListarPesquisaCliente extends AppCompatActivity {
 
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        finish();
-    }
-
-  /*  private void searchData(String name) {
-            Cursor cursor = db.searchData(name);
 
 
-        if(cursor.getCount() == 0){
+    private void searchData(String name) {
+
+        Cursor cursor = db.searchData(name);
+
+
+        if (cursor.getCount() == 0) {
             Toast.makeText(this, "Sem dados para mostrar", Toast.LENGTH_SHORT).show();
-        }
-        else{
-            while (cursor.moveToNext()){
+        } else {
+            while (cursor.moveToNext()) {
 
                 String nome = cursor.getString(1);
                 String matricula = cursor.getString(2);
+                String endereco = cursor.getString(3);
+                String numero = cursor.getString(4);
+                String complemento = cursor.getString(5);
+                String cidade = cursor.getString(6);
 
 
+                listItem.add("\n" + "Nome: " + nome + "\n\n" +
+                        "Matrícula: " + matricula + "\n\n" +
+                        "Endereço: " + endereco + "\n\n" +
+                        "Número: " + numero + "\n\n" +
+                        "Complemento: " + complemento + "\n\n" +
+                        "Cidade: " + cidade + "\n");
 
-
-                listItem.add("\n" + "Nome: " + nome + "\n" +
-                        "Matrícula: " + matricula + "\n");
-                //        listItem.add(cursor.getString(1));
-                //       listItem.add(cursor.getString(2)); // index 1 é nome, index 0 é ID
             }
+
+
 
             adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listItem);
             userlist.setAdapter(adapter);
 
         }
-    }*/
+    }
+
+    public void voltar(View view) {
+        Intent it = new Intent(this, CadastrarCliente.class);
+        it.putExtra("ParametroLogin",
+                "alicetorres");
+        startActivity(it);
+
+    }
 }

@@ -23,5 +23,14 @@
     <string name="tituloSearch">Busca</string>
     <string name="deletar">Deletar</string>
     <string name="deletartudo">Deletar Tudo</string>
-    <string name="insira_nome">Insira o nome</string>
+    <string name="insira_nome">Ex: Alice Torres</string>
+    <string name="search_hint">Insira o nome do cliente</string>
+    <string name="action_search">Search</string>
+    <string name="insira_matricula">Ex: 202002222786</string>
+    <string name="insira_endereco">Ex: Bairro de Icaraí.</string>
+    <string name="insira_numero">Ex: 123</string>
+    <string name="insira_complemento">Ex: Ap 1203 Bloco II.</string>
+
+    <string name="insira_cidade">Ex: Niterói</string>
+    <string name="atualizar">Atualizar</string>
 </resources>

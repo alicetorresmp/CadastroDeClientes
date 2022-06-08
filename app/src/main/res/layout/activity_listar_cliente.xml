@@ -4,7 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListarCliente">
+    tools:context=".ListarCliente"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="@dimen/arrow_size"
+        android:layout_height="wrap_content"
+        android:background="@drawable/car_ui_icon_arrow_back"
+        android:onClick="voltar"/>
 
     <ListView
         android:id="@+id/users_list"

@@ -12,13 +12,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+        <Button
+            android:layout_width="@dimen/arrow_size"
+            android:layout_height="wrap_content"
+            android:background="@drawable/car_ui_icon_arrow_back"
+            android:onClick="voltar"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/deletartudo"
-        android:onClick="deleteAll"/>
+
 
     </LinearLayout>
 
@@ -37,15 +37,36 @@
             android:layout_margin="@dimen/margin_gif"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints="Nome"
+            android:hint="@string/insira_nome"
             android:id="@+id/txtNameDelete"/>
 
-        <Button
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/deletar"
-            android:onClick="delete"/>
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+
+            <Button
+
+                android:backgroundTint="@color/rosa_medio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/deletartudo"
+                android:onClick="deleteAll"/>
+
+             <Button
+                android:layout_marginStart="@dimen/margin_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/deletar"
+                android:onClick="delete"/>
+
+
+
+    </LinearLayout>
 
     </LinearLayout>
 
